@@ -42,7 +42,7 @@ def osd(*args, **kwargs):
                          'cmd.run',
                          ['ceph osd ls -f json'],
                          # backport trap -> expr_form
-                         tgt_type='compound')
+                         expr_form='compound')
     all_osds = all_osds[master_minion].strip()
 
     for osd_id in osds:
